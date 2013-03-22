@@ -349,7 +349,7 @@
 				$this->get('related_field_id')
 			));
 
-			$element->setAttribute('related-field-handle', $related_field_handle);
+			$element->setAttribute('source-price-field', $related_field_handle);
 			$element->setAttribute('percentage', 
 				number_format((((float)$value / (float)$related_field_data) * 100.0) - 100.0, 2, '.', '')
 			);
