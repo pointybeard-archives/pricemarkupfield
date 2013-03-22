@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="pricemarkupfield" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Price Markup Field</name>
+	<description>Calculates a final markup price from a percentage value</description>
+	<repo type="github">https://github.com/symphonycms/pricemarkupfield</repo>
+	<url type="discuss">http://symphony-cms.com/discuss/thread/XXX/</url>
+	<types>
+		<type>Field Types</type>
+	</types>
+	<authors>
+		<author>
+			<name github="pointybeard">Alistair Kearney</name>
+			<website>http://alistairkearney.com</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0" date="2013-03-22" min="2.3.2">
+			- Initial release
+		</release>
+	</releases>
+</extension>

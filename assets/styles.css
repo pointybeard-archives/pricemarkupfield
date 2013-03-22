@@ -1,0 +1,14 @@
+/* @override http://projects.alistairkearney.com/ruleandmake/extensions/pricemarkupfield/assets/styles.css */
+
+.field-pricemarkup input.actual-value {
+	width: 25%;
+	margin-right: 15px;
+}
+
+input.markup-source-field {
+	display: none;
+}
+
+.field-pricemarkup input.percentage {
+	width: 20%;
+}
