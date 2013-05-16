@@ -16,7 +16,7 @@
 	-------------------------------------------------------------------------*/
 
 		public function mustBeUnique(){
-			return true;
+			return false;
 		}
 
 		public function isSortable() {
@@ -154,7 +154,7 @@
 				Widget::Input(
 					'fields'.$fieldnamePrefix.'['.$this->get('element_name').']'.$fieldnamePostfix,
 					(strlen($value) != 0 ? $value : NULL),
-					'text', array('class' => 'actual-value', 'onchange' => 'updatePercentageFromActual(this.value)')
+					'text', array('class' => 'actual-value')
 				)
 			);
 			
@@ -167,7 +167,7 @@
 					(($related_field_data > 0 && $value > 0) 
 						? number_format((((float)$value / (float)$related_field_data) * 100.0) - 100.0, 2, '.', '') 
 						: NULL),
-					'text', array('class' => 'percentage', 'onchange' => 'updateMarkupFromPercentage(this.value)')
+					'text', array('class' => 'percentage')
 				)
 			);
 			

@@ -1,17 +1,17 @@
-function updateMarkupFromPercentage(value){
-	actual_value = document.getElementsByClassName("actual-value")[0];
-	markup_source_field_handle = document.getElementsByClassName("markup-source-field")[0].value;
+jQuery(function($){
 	
-	source = +(document.getElementsByName('fields['+markup_source_field_handle+']')[0].value);
+$('.actual-value').change(function() {  
+	source_field_handle = $(".markup-source-field").val();
+	cost_price = $('[name="fields['+source_field_handle+']"]').val();
 	
-	actual_value.value = source + (source * (+(value) / 100.0));
-}	
+	$(this).siblings('.percentage').val(((this.value / cost_price) * 100) - 100);
+});
 
-function updatePercentageFromActual(value){
-	percentage_value = document.getElementsByClassName("percentage")[0];
-	markup_source_field_handle = document.getElementsByClassName("markup-source-field")[0].value;
+$('.percentage').change(function() {  
+	source_field_handle = $(".markup-source-field").val();
+	cost_price = $('[name="fields['+source_field_handle+']"]').val();
 
-	source = +(document.getElementsByName('fields['+markup_source_field_handle+']')[0].value);
+	$(this).siblings('.actual-value').val(+(cost_price) + (+(cost_price) * (+(this.value) / 100.0)));
+});
 
-	percentage_value.value = ((value / source) * 100) - 100;
-}
+});
